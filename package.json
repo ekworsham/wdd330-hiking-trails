@@ -1,0 +1,23 @@
+{
+  "name": "wdd330-hiking-trails",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "vite",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ekworsham/wdd330-hiking-trails.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ekworsham/wdd330-hiking-trails/issues"
+  },
+  "homepage": "https://github.com/ekworsham/wdd330-hiking-trails#readme",
+  "description": "",
+  "devDependencies": {
+    "vite": "^6.2.5"
+  }
+}
