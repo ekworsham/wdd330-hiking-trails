@@ -20,5 +20,8 @@
   "description": "",
   "devDependencies": {
     "vite": "^6.2.5"
+  },
+  "dependencies": {
+    "wdd330-hiking-trails": "file:"
   }
 }
