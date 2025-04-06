@@ -8,21 +8,25 @@
     <link rel="styles" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Self-Guided Walking Tours</h1>
-        <p>Explore beautiful parks and trails across the country!</p>
-    </header>
+    <header class="divider" id="header"></header>
 
-    <section id="parks-list">
-        <h2>Parks to Explore</h2>
-        <div class="parks-container" id="parks-container">
-            <!-- Parks will be displayed here -->
-        </div>
-    </section>
+    <main class ="explore" >
+        <section class="parksList">
+            <h2>Parks to Explore; <span class="parks"> </span></h2>
+            <div class="parks-container" id="parks-container">
+                <a href=""><img
+                    src="images"
+                    alt="park image"
+                    style="width: 75px; height: 75px"/>
+                </a>
 
-    <footer>
-        <p>Powered by the National Park Service API</p>
-    </footer>
+                <ul class="park-list"></ul>
+                <!-- Parks will be displayed here -->
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer"></footer>
 
     
 </body>
