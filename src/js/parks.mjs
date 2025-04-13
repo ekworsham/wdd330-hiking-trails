@@ -5,12 +5,11 @@ function parkCardTemplate(park) {
     return `
         <li class="park-card">
             <h1>${park.fullName}</h1>
-            <p">${park.description}</p>
+            <p>${park.description}</p>
+            <p>${park.weatherInfo}</p>
         </li>
     `;
 }
-
-
 export default class Parks {
     constructor(dataSource, parkList) {
         this.dataSource = dataSource;
@@ -27,4 +26,3 @@ export default class Parks {
         renderListWithTemplate(parkCardTemplate, this.parkList, list);
     }
 }
-
