@@ -60,3 +60,11 @@ export async function loadHeaderFooter() {
     footerLoaded = true; //We mark that the footer has already been loaded.
   }
 }
+
+// return the parameters from the URL
+export function getParam(param) {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const product = urlParams.get(param);
+  return product;
+}

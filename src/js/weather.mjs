@@ -1,39 +1,39 @@
-import { renderListWithTemplate } from "./utils.mjs";
+import { getParam } from "./utils.mjs";
 
 // Wrap in an <a> tag to make it clickable
-function weatherCardTemplate(weather) {
+function weatherTemplate(weather) {
+    console.log(weather)
     return `
-        <li class="weather-card">
-            <h1>${location.name}</h1>
-            <p>${location.region}</p>
-            <p>${current.temperature}</p>
-            <button class="homeButton">Return Home</button>
-        </li>
+        <h1>${weather.location.name}</h1>
+        <p>${weather.location.region}</p>
+        <p>${weather.current.temperature}</p>
+        <button class="homeButton">Return Home</button>
     `;
 }
 
 export default class Weather {
-    constructor(dataSource, weatherList) {
+    constructor(dataSource, weatherElement) {
         this.dataSource = dataSource;
-        this.weatherList = weatherList;
+        this.weatherElement = weatherElement;
     }
 
     async init() {
-        const list = await this.dataSource.getAllWeather();
-        this.renderList(list);
+        const lat = getParam("lat");
+        const lon = getParam("lon");
+        const fixedLon = lon.replace("/", "")
+        const details = await this.dataSource.getWeather(lat, fixedLon);
+        this.weatherElement.innerHTML = weatherTemplate(details);
+        
         this.addHomeButtonListeners();
     }
 
-    // render after doing the first stretch
-    renderList(list) {
-        renderListWithTemplate(weatherCardTemplate, this.weatherList, list);
-    }
+
 
     addHomeButtonListeners() {
         const buttons = document.querySelectorAll(".homeButton");
         buttons.forEach(button => {
             button.addEventListener("click", function() {
-                window.location.href = "src/index.html";
+                window.location.href = "/";
             });
         });
     }
