@@ -15,9 +15,9 @@ export default class ExternalServices {
     }
 
     async getWeather() {
-        const weatherUrl = '&lon=ttps://api.weatherbit.io/v2.0/current?';
+        const weatherUrl = 'http://api.weatherstack.com/current?access_key=';
         const weatherResponse = await fetch(`${weatherUrl}?api_key=${weatherKey}`);
-        const weatherData = await response.json();  // turn the response into JSON
+        const weatherData = await weatherResponse.json();  // turn the response into JSON
         return weatherData.data; 
     }
 }

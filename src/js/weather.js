@@ -5,7 +5,7 @@ import { loadHeaderFooter } from "./utils.mjs"
 loadHeaderFooter();
 
 const dataSource = new ExternalServices();
-const weatherList = document.querySelector(".park-list");
+const weatherList = document.querySelector(".weather-list");
 
-const weather = new weather(dataSource, weatherList);
+const weather = new Weather(dataSource, weatherList);
 weather.init();
