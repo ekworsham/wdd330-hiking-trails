@@ -9,8 +9,9 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "src/index.html"),
-        
-       
+        header: resolve(__dirname, "src/public/partials/header.html"),
+        footer: resolve(__dirname, "src/public/partials/footer.html"),
+        weather: resolve(__dirname, "src/weather/index.html"),
       },
     },
   },
