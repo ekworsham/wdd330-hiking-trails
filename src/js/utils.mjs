@@ -41,7 +41,7 @@ export async function loadHeaderFooter() {
   // console.log("loadHeaderFooter");
   // Load the header only if it has not been loaded before.
   if (!headerLoaded) {
-    const headerTemplate = await loadTemplate("../headerFooter/header.html");
+    const headerTemplate = await loadTemplate("../public/partials/header.html");
     const headerElement = document.querySelector("#header");
 
     if (!headerElement.innerHTML.trim()) {
@@ -51,7 +51,7 @@ export async function loadHeaderFooter() {
   }
   //Load the footer only if it has not been loaded before.
   if (!footerLoaded) {
-    const footerTemplate = await loadTemplate("../headerFooter/footer.html");
+    const footerTemplate = await loadTemplate("../public/partials/footer.html");
     const footerElement = document.querySelector("#footer");
 
     if (!footerElement.innerHTML.trim()) {

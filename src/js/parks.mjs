@@ -3,12 +3,12 @@ import { renderListWithTemplate } from "./utils.mjs";
 function parkCardTemplate(park) {
     return `
         <li class="park-card">
-            <h1>PARK FULL NAME<br>${park.fullName}</h1>
-            <h3>NAME<br>${park.name}. State: ${park.states}</h3>
-            <p>Description<br>${park.description}</p>
-            <p>Designation<br>${park.designation}</p>
-            <p>Park URL<br>${park.url}</p>
-            <p>Directions<br>${park.directionsInfo}</p>
+            <h1><strong style="font-size: 26px;">PARK FULL NAME</strong><br>${park.fullName}</h1>
+            <h3><strong style="font-size: 20px;">NAME</strong><br>${park.name}<br>State: ${park.states}</h3>
+            <p><strong style="font-size: 20px;">Description</strong><br>${park.description}</p>
+            <p><strong style="font-size: 20px;">Designation</strong><br>${park.designation}</p>
+            <p><strong style="font-size: 20px;">Park URL</strong><br>${park.url}</p>
+            <p><strong style="font-size: 20px;">Directions</strong><br>${park.directionsInfo}</p>
 
             <a class="latLong" href="/weather/?lat=${park.latitude}&lon=${park.longitude}">Weather Details</a>
         </li>
