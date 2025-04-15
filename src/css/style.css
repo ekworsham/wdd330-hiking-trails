@@ -55,23 +55,49 @@ html {
     list-style-type: none;
     margin: 10px;
     border: 6px solid darkgray;
-    box-shadow: 6px 6px 8px black;
+    box-shadow: 2px 2px 10px #333;
+    border-radius: 10px;
 }
+
 .park-card:hover {
     background-color: #a9b14c;
-}
+} 
 
 .park-card h1, h3, p{
     font-size: 1rem;
     text-align: center;
-}
+} 
 
 .latLong {
     display: block;
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
-  }
+}
+
+.weather h1, p{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.homeButton {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    opacity: 10;
+    animation: fadeIn .5s ease-in forwards;
+
+
+}
+
+.park-card {
+    background-color: #a9b14c;
+    transition: background-color 1s ease;
+}
+      
+.park-card:hover {
+        background-color: rgb(134, 228, 134);
+}
 
   @media only screen and (min-width: 38rem) {
 
@@ -84,6 +110,41 @@ html {
         font-size: 3rem;
     }
 
+    .park-card {
+        max-width: 42%;
+        padding: 15px;
+        box-shadow: 2px 2px 10px #333;
+        border-radius: 10px;
+    }
 
+    .park-list {
+        display: flex;
+        justify-content: center; /* or space-between / space-around */
+        gap: 20px; /* adds space between the cards */
+        flex-wrap: wrap; /* ensures responsiveness */
+        margin: 20px;
+        align-items: center;
+    }
+
+    .explore {
+        margin-top: 1.2rem;
+        
+    }
+
+    .homeButton {
+        display: block;
+        margin: 0 auto;
+        font-size: large;
+        margin-bottom: 2rem;  
+        opacity: 50;
+        animation: fadeIn 5s ease-in forwards;      
+    }
+
+    .latLong {
+        font-size: 1.75rem;
+    }
+
+    #footer {
+        font-size: 1.5rem;
+    }
   }
-
