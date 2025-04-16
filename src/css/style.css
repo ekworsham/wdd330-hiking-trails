@@ -60,7 +60,8 @@ html {
 .favorites p {
     background-color: pink;
     margin: 0 auto;
-    max-width: 75%;
+    max-width: 50%;
+    line-height: 2;
 }
 
 .parks-container {
@@ -103,8 +104,6 @@ html {
     margin-bottom: 2rem;
     opacity: 10;
     animation: fadeIn .5s ease-in forwards;
-
-
 }
 
 .park-card {
