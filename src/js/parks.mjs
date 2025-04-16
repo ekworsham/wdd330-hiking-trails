@@ -9,8 +9,8 @@ function parkCardTemplate(park) {
             <p><strong style="font-size: 20px;">Designation</strong><br>${park.designation}</p>
             <p><strong style="font-size: 20px;">Park URL</strong><br>${park.url}</p>
             <p><strong style="font-size: 20px;">Directions</strong><br>${park.directionsInfo}</p>
-
             <a class="latLong" href="/weather/?lat=${park.latitude}&lon=${park.longitude}">Weather Details</a>
+            <button class="favPark" data-id=${park.id}>Pick As Favorite</button>
         </li>
     `;   
 }
@@ -23,11 +23,40 @@ export default class Parks {
     async init() {
         const list = await this.dataSource.getAllParks();
         this.renderList(list);
+        this.favoritePark();
+        this.renderFavorites(list);
     }
 
     // render after doing the first stretch
     renderList(list) {
-        const parksToDisplay = list.slice(0, 10);
+        const parksToDisplay = list.slice(0, 16);
         renderListWithTemplate(parkCardTemplate, this.parkList, parksToDisplay);
     }
+
+    favoritePark() {
+        const favButtons = document.querySelectorAll(".favPark");
+
+        favButtons.forEach(button => {
+            button.addEventListener("click", function(event) {
+            let parks = JSON.parse(localStorage.getItem("parks")) || [];
+            parks.push(event.target.dataset.id);
+            localStorage.setItem("parks", JSON.stringify(parks));
+            }) 
+        })
+    }
+
+    renderFavorites(list) {
+        const favoritesSelector = document.querySelector(".favorites");
+        const favoriteParks = JSON.parse(localStorage.getItem("parks")) || [];
+        let filteredParks =[];
+        favoriteParks.forEach(park => {
+           filteredParks.push(list.filter(item => item.id == park));
+        })
+        filteredParks.forEach(park => {
+            favoritesSelector.innerHTML += `<p>${park[0].fullName}</p>`
+        })
+
+
+    }
+
 }

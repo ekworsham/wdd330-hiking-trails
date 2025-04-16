@@ -10,7 +10,6 @@ function weatherTemplate(weather) {
         <button class="homeButton">Return Home</button>
     `;
 }
-
 export default class Weather {
     constructor(dataSource, weatherElement) {
         this.dataSource = dataSource;
@@ -26,8 +25,6 @@ export default class Weather {
         
         this.addHomeButtonListeners();
     }
-
-
 
     addHomeButtonListeners() {
         const buttons = document.querySelectorAll(".homeButton");
