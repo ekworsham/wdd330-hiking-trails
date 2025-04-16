@@ -4,9 +4,9 @@ import { getParam } from "./utils.mjs";
 function weatherTemplate(weather) {
     console.log(weather)
     return `
-        <h1>CITY: ${weather.location.name}</h1>
-        <p>STATE: ${weather.location.region}</p>
-        <p>Current temperature is ${weather.current.temperature}°</p>
+        <h1>CITY: ${weather.name}</h1>
+        <p>Description: ${weather.weather[0].description}</p>
+        <p>Current temperature is ${weather.main.temp}°</p>
         <button class="homeButton">Return Home</button>
     `;
 }

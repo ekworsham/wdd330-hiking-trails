@@ -55,8 +55,5 @@ export default class Parks {
         filteredParks.forEach(park => {
             favoritesSelector.innerHTML += `<p>${park[0].fullName}</p>`
         })
-
-
     }
-
 }
