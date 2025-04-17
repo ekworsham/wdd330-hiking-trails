@@ -61,7 +61,25 @@ html {
     background-color: pink;
     margin: 0 auto;
     max-width: 50%;
-    line-height: 2;
+    line-height: 1.25;
+    background-color: #e2e5dd;;
+    margin: 0 auto;
+    max-width: 55%;
+    border: 6px solid darkgray;
+    box-shadow: 2px 2px 10px #333;
+    border-radius: 10px;
+    font-style: italic;
+}
+.favPark {
+    margin: 0 auto;
+    border: none;
+    padding: 0 0 0 0;
+    border: 6px solid darkgray;
+    box-shadow: 2px 2px 10px #333;
+    border-radius: 10px;
+    font-style: italic;
+    display: grid;
+    margin-bottom: 1rem;;
 }
 
 .parks-container {
@@ -94,10 +112,13 @@ html {
     margin-bottom: 10px;
 }
 
+
 .weather h1, p{
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
+
+
 
 .homeButton {
     display: block;
@@ -160,6 +181,37 @@ html {
 
     .latLong {
         font-size: 1.75rem;
+    }
+    .favs {
+        font-size: 2rem;
+    }
+
+    .favorites p {
+        font-size: 2rem;
+    }
+
+    .park-card h1, h3{
+        font-size: 2rem;
+    }
+
+    .park-card p{
+        font-size: 1.5rem;
+    }
+
+    .favPark {
+        font-size: 1.5rem;
+    }
+
+    .weather h1, h2, p {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .homeButton {
+        font-size: 2rem;
+        padding: 15px;
+        box-shadow: 2px 2px 10px #333;
+        border-radius: 10px;
     }
 
     #footer {
