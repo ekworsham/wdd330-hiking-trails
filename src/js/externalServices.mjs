@@ -23,12 +23,3 @@ export default class ExternalServices {
         return weatherData; 
     }
 }
-
-// async getWeather(lat, lon) {
-//     const weatherUrl = 'http://api.weatherstack.com/current';
-//     const query = `${lat},${lon}`;
-//     const units = 'f';
-//     const weatherResponse = await fetch(`${weatherUrl}?access_key=${weatherKey}&query=${query}&units=${units}`);
-//     const weatherData = await weatherResponse.json();  // turn the response into JSON
-//     return weatherData; 
-// }
